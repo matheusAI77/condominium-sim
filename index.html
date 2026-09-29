@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Condomínio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hud">
+    <div class="hud-item"><span class="hud-label">Dinheiro</span><span id="hud-money"></span></div>
+    <div class="hud-item"><span class="hud-label">Mês</span><span id="hud-month"></span></div>
+    <div class="hud-item"><span class="hud-label">Ocupados</span><span id="hud-occupied"></span></div>
+    <button id="btn-advance" class="btn btn-primary">Avançar mês</button>
+  </header>
+
+  <main class="layout">
+    <section class="panel building-panel">
+      <svg id="building" role="img" aria-label="Prédio em corte lateral"></svg>
+      <div class="legend">
+        <span><i class="sw sw-vacant"></i>Vago</span>
+        <span><i class="sw sw-happy"></i>Satisfeito</span>
+        <span><i class="sw sw-neutral"></i>Neutro</span>
+        <span><i class="sw sw-unhappy"></i>Insatisfeito</span>
+      </div>
+      <div id="details" class="details"></div>
+    </section>
+
+    <aside class="side">
+      <section class="panel">
+        <h2>Candidatos</h2>
+        <div id="candidates"></div>
+      </section>
+      <section class="panel">
+        <h2>Regras</h2>
+        <div id="rules"></div>
+      </section>
+      <section class="panel">
+        <h2>Acontecimentos</h2>
+        <ul id="log" class="log"></ul>
+      </section>
+      <button id="btn-reset" class="btn btn-ghost">Novo jogo</button>
+    </aside>
+  </main>
+
+  <script src="js/state.js"></script>
+  <script src="js/tenants.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/simulation.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
